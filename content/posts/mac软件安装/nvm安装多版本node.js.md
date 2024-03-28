@@ -1,0 +1,108 @@
+# nvm安装多版本node.js
+
+### 介绍
+nvm（Node Version Manager）是一个命令行工具，允许开发者在同一台机器上快速安装和使用不同版本的Node.js。这对于测试和管理不同项目所需的Node.js环境非常有用，因为不同的项目可能需要不同的Node.js版本。
+
+### 1. 安装/更新
+- 运行如下命令
+
+```linux
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
+
+更新的话，重新运行上面的脚本即可（注意版本号改成最新的）
+
+
+- 检查 ~/.zshrc 或者 ~/.bash_profile 中是否有如下命令，没有的话添加
+
+```linux
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+```
+- 重启终端，或者运行如下命令重新加载配置
+
+```
+source ~/.zshrc
+```
+或者
+```
+source ~/.bash_profile
+```
+
+- 检查是否安装成功
+
+```linux
+nvm --version
+```
+
+- 切换nvm源为国内源
+
+编辑~/.bash_profile，设置nvm的
+
+```linux
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
+
+```
+
+### 2. 使用
+- 安装指定版本的node
+
+```linux
+nvm install <version>
+```
+
+比如安装12版本的node执行
+
+```linux
+nvm install 12
+```
+
+- 安装指定版本的node，并且从特定的node版本导入npm安装过的包
+
+```linux
+nvm install <version> --reinstall-packages-from=<other_version>
+```
+
+比如，已经安装了12版本的node，现在想安装10版本的，并且从12版本导入npm安装过的包（比如vue...）
+
+```linux
+nvm install 10 --reinstall-packages-from=12
+
+```
+
+- 不同版本之前切换
+
+```linux
+nvm use <version>
+```
+
+- 查看已安装的版本
+
+```linux
+nvm ls
+```
+
+- 设置node的某个版本为默认
+```
+nvm alias default <version>
+```
+
+- 卸载
+
+不要卸载当前正在使用的版本，想卸载的话，请先切换到其它版本
+
+```linux
+nvm uninstall <version>
+```
+
+### 3. 使用cnpm代替npm（可选）
+> 参考：https://npmmirror.com/
+
+安装cnpm
+
+```linux
+npm install -g cnpm --registry=https://registry.npmmirror.com
+```
+
+> 安装参考：https://github.com/nvm-sh/nvm
