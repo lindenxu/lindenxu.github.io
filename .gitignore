@@ -1,5 +1,5 @@
 .DS_Store
-
+.obsidian
 .hugo_build.lock
 
 public
