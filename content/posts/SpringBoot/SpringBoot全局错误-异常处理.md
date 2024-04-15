@@ -1,8 +1,8 @@
 ---
-title: SpringBoot全局错误-异常处理
+title: SpringBoot全局错误异常处理
 tags:
   - SpringBoot
-date: 2021-04-12 15:00:00
+date: 2020-12-22 15:00:00
 draft: false
 hideInList: false
 isTop: false
@@ -12,5 +12,6 @@ feature:
 
 ### 参考
 >[SpringBoot覆盖默认的错误处理方式](https://blog.csdn.net/L_Sail/article/details/70198886)
+
 > [SpringBoot 统一异常处理(附核心工具类-ErrorInfoBuilder)](https://juejin.cn/post/6844903822171570190)
 
