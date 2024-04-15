@@ -11,7 +11,8 @@ isTop: false
 feature:
 ---
 
-AdoptOpenJDK 已gai'wei
+AdoptOpenJDK 已变更为 Temurin JDK
+
 <!--more-->
 
 ### JDK 概述
