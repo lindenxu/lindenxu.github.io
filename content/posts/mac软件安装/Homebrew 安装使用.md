@@ -1,9 +1,19 @@
-# Homebrew 安装使用
+---
+title: Homebrew 安装使用
+tags:
+  - Mac
+date: 2020-11-24 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
 
-### 概述
 Homebrew 简称：brew。
 是Mac/Linux上的软件包管理工具，能狗方便的安装软件或者卸载软件，使用命令，非常方便。
 笔者主要用来安装在终端环境下使用的软件/工具。
+
+<!--more-->
 
 ### 安装
 1. 按照官网的命令安装（由于被墙的原因，速度很慢）

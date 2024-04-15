@@ -1,4 +1,15 @@
-# ssh 免密登陆
+---
+title: ssh 免密登陆
+tags:
+  - Mac
+date: 2020-05-31 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+
 
 ### 1. 安装sshpass
 
