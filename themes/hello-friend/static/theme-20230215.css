@@ -732,6 +732,11 @@ hr {
 	text-decoration: none
 }
 
+#all-tags {
+	overflow-wrap: break-word;
+    word-break: break-all;
+}
+
 #all-tags a{
 	font-size: 1.2rem;
 	text-decoration: none;
