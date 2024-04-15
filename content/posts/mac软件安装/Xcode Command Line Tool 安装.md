@@ -1,7 +1,19 @@
-# Xcode Command Line Tool 安装
+---
+title: Xcode Command Line Tool 安装
+tags:
+  - Mac
+date: 2023-11-08 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+Xcode Command Line Tool是Mac OS上的一套在终端上运行的开发工具。
+
+<!--more-->
 
 ## 1. 介绍
-Xcode Command Line Tool是Mac OS上的一套在终端上运行的开发工具。
 
 Mac OS并不包含开箱即用的编程所需的所有软件和工具。 相反，Apple 为程序员提供了一个名为 Xcode 的完整开发环境，可以单独下载和安装。 完整的 Xcode 包非常庞大，需要超过 40GB 的磁盘空间，并且支持所有 Apple 操作系统的开发。 许多软件开发人员，尤其是 Web 应用程序开发人员，使用 Mac，但并不只为 Apple 设备开发软件。 他们仍然需要使用 Xcode 包安装的类 Unix 工具和实用程序。 幸运的是，Apple 提供了一个单独且小得多的下载，即 Xcode Command Line Tools，它可以安装软件开发最需要的实用程序。 
 

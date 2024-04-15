@@ -1,4 +1,14 @@
-# cheat 安装
+---
+title: cheat 安装
+tags:
+  - Mac
+  - brew
+date: 2023-10-25 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
 
 ## 1. 介绍
 cheat命令通过简单的实例告诉你一个命令的具体使用方法
