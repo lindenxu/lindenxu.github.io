@@ -1,4 +1,18 @@
-# node包管理命令
+---
+title: node包管理命令
+tags:
+  - 前端
+  - HTML
+date: 2023-10-07 14:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+整理 npm，pnpm，yarn 命令对比
+
+<!--more-->
 
 | 命令描述                               | npm | pnpm                                 | yarn |
 |----------------------------------------|-----|--------------------------------------|------|

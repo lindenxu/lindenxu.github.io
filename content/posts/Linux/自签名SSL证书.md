@@ -1,4 +1,17 @@
-# 自签名SSL证书
+---
+title: 自签名SSL证书
+tags:
+  - Linux
+date: 2023-10-24 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+自签名证书
+
+<!--more-->
 
 
 ## 一 证书生成

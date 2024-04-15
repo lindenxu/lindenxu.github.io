@@ -19,17 +19,9 @@ rssLimit = 5
 
 [menu]
   [[menu.main]]
-  name="读书"
-  url="/posts/reading/"
+  name="首页"
+  url="/posts/"
   weight="1"
-  [[menu.main]]
-  name="Obsidian"
-  url="/posts/obsidian/"
-  weight="2"
-  [[menu.main]]
-  name="闲聊"
-  url="/posts/chat/"
-  weight="3"
   [[menu.main]]
   name="归档"
   url="/archives/"

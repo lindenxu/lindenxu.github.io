@@ -1,4 +1,17 @@
-# 自签名SSL证书双向认证
+---
+title: 自签名SSL证书双向认证
+tags:
+  - Linux
+date: 2023-10-24 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+自签名双向认证证书
+
+<!--more-->
 
 ## 一 根证书生成
 ### 1. 生成root私钥key

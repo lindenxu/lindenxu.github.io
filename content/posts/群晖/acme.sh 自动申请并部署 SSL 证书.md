@@ -1,4 +1,19 @@
-# 使用 docker 运行 acme.sh 自动申请并部署 SSL 证书
+---
+title: acme.sh 自动申请并部署 SSL 证书
+tags:
+  - 群晖
+  - nas
+date: 2024-03-08 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+acme.sh 用于生成免费的ssl证书，其实现了acme协议，由纯Shell脚本语言编写。
+本文使用 docker 部署 acme.sh 。
+
+<!--more-->
 
 
 # 1. 前言
@@ -9,6 +24,7 @@
 - 申请的域名多了，操作起来麻烦，尤其是各个证书的续期时间还不一样
 
 经过几番搜索之后找到了一劳永逸的方式：[acme.sh](https://github.com/acmesh-official/acme.sh)
+
 
 # 2. 获取 DNS API 调用密钥
 根据域名 DNS 服务商的不同，获取密钥的方式也不同。

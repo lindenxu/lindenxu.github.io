@@ -1,8 +1,18 @@
-# mosh使用
+---
+title: mosh使用
+tags:
+  - Linux
+date: 2020-11-22 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
 
-### 能帮助我们解决什么问题
 当使用ssh连接远程服务器时，遇到网络延时高或者客户端丢失网络变更ip后，ssh连接就会自动断开。网络恢复后并不会重连，需要重新ssh。
 使用mosh的话，就会解决该问题。
+
+<!--more-->
 
 
 ### 概述
