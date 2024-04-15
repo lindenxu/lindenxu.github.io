@@ -1,8 +1,8 @@
 ---
-title: nvm安装多版本node.js
+title: nvm安装多版本node
 tags:
   - Mac
-date: 2020-16-11 15:00:00
+date: 2020-06-11 15:00:00
 draft: false
 hideInList: false
 isTop: false
