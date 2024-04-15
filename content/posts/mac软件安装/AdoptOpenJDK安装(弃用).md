@@ -1,4 +1,18 @@
-# AdoptOpenJDK安装(弃用)
+---
+title: AdoptOpenJDK安装(弃用)
+tags:
+  - Mac
+  - brew
+  - Java
+date: 2020-11-26 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+
+<!--more-->
 
 ### JDK 概述
 2019年之后, Oracle 对 Java 的商业模式进行了一系列改革, 因此多种版本的 JDK 出现在开发者的视野中。

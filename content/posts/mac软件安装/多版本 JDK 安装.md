@@ -4,7 +4,7 @@ tags:
   - Mac
   - brew
   - Java
-date: 2023-10-24 15:00:00
+date: 2023-10-23 15:00:00
 draft: false
 hideInList: false
 isTop: false
@@ -13,6 +13,7 @@ feature:
 
 本文使用的是 brew 的方式安装 Zulu JDK
 
+<!--more-->
 
 ### 介绍
 JDK（Java Development Kit）是Java语言的软件开发工具包，主要用于移动设备、嵌入式设备上的Java应用程序开发。它包含了Java的运行环境（JRE）和一组Java开发工具。JDK是整个Java开发的核心，没有它，无法编译和运行Java程序。其中的开发工具包括编译工具(javac.exe)，打包工具(jar.exe)等。
