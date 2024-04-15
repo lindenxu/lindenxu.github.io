@@ -1,4 +1,15 @@
-# 多版本 JDK 安装
+---
+title: 多版本 JDK 安装
+tags:
+  - Mac
+  - brew
+  - Java
+date: 2023-10-24 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
 
 本文使用的是 brew 的方式安装 Zulu JDK
 
