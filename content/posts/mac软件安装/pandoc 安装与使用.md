@@ -1,7 +1,17 @@
-# pandoc 安装与使用
+---
+title: pandoc 安装与使用
+tags:
+  - Mac
+date: 2023-10-07 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
 
-# 介绍
 Pandoc是一个通用的文档转换工具，可以支持多种标记语言之间的格式转换，例如Markdown、Microsoft Word、PowerPoint、HTML、PDF、LaTeX等。它可以将一种格式的文档转换成另一种格式，使得不同文档之间的兼容性和可读性得到了极大的提高。
+
+
 
 # 安装
 下载地址：

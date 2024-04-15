@@ -1,8 +1,18 @@
-# StarUML 安装
+---
+title: StarUML 安装
+tags:
+  - Mac
+date: 2023-10-07 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
 
-# 介绍
+
 StarUML是一个精细的软件建模器，旨在支持敏捷和简洁的建模。StarUML遵循UML 2.x标准，支持多种UML图形，如用例图、类图、序列图、状态图、实体-关系图（ERD）和数据流图（DFD）等，用于进行各种类型的软件建模。
-
+  
+<!--more-->
 
 
 # 下载安装
