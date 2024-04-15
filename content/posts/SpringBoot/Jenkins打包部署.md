@@ -1,4 +1,17 @@
-# Jenkins打包部署
+---
+title: Jenkins打包部署
+tags:
+  - Jenkins
+  - Linux
+  - 运维
+date: 2023-06-19 15:00:00
+draft: false
+hideInList: false
+isTop: false
+feature:
+---
+
+
 
 ### Jenkins执行脚本
 ```
@@ -33,7 +46,7 @@ URL="https://nplus-front.oss-cn-shanghai.aliyuncs.com/project/${JOB_NAME}/prod/$
 
 #发送钉钉通知
 content="项目：${JOB_NAME}\n环境：正式环境\n版本：${VERSION}\n指纹：${md5}\n地址：${URL}"
-curl 'https://oapi.dingtalk.com/robot/send?access_token=c537d144438e89a726a7c0e6b779f96fe51eeb46827a25e4bca665ef77a7a152' \
+curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
    -H 'Content-Type: application/json' \
    -d '{"msgtype": "text", "text": {"content": "尼尔森'${content}'"}}'
 
@@ -55,7 +68,7 @@ URL="https://nplus-front.oss-cn-shanghai.aliyuncs.com/project/${JOB_NAME}/uat/$M
 
 #发送钉钉通知
 content="项目：${JOB_NAME}\n环境：UAT环境\n版本：${VERSION}\n指纹：${md5}\n地址：${URL}"
-curl 'https://oapi.dingtalk.com/robot/send?access_token=c537d144438e89a726a7c0e6b779f96fe51eeb46827a25e4bca665ef77a7a152' \
+curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
    -H 'Content-Type: application/json' \
    -d '{"msgtype": "text", "text": {"content": "尼尔森'${content}'"}}'
 
@@ -82,7 +95,7 @@ res=${res/\"/ }
 res=${res/,/ }
 
 
-curl 'https://oapi.dingtalk.com/robot/send?access_token=012acf4b146924779cfb1c61c60596a72634c9fe0318dbd7147447dfe9f70bff' \
+curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
    -H 'Content-Type: application/json' \
    -d '{"msgtype": "text", "text": {"content": "【service-project重启】'${res}'"}}'
 
