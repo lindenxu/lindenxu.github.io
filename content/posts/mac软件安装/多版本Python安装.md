@@ -49,6 +49,8 @@ rm -rf $(pyenv root)
 
 ### 2. 使用
 
+全部命令请参考[pyenv command](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md)
+
 - 查看所有可安装的版本
 ```
 pyenv install -l
