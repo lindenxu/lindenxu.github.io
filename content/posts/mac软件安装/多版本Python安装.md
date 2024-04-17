@@ -36,10 +36,14 @@ source ~/.zshrc
 ```
 
 #### 更新
-
+```
+pyenv update
+```
 
 #### 卸载
+```
 
+```
 
 ### 参考
 - [pyenv github](https://github.com/pyenv/pyenv)
