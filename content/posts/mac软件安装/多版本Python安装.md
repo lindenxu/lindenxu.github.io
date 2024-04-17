@@ -79,7 +79,7 @@ pyenv install 3.12.3
 - 切换 Python 版本
 根据使用情景，有如下切换命令
 ```
-pyenv shell <version> -- 仅选择当前 shell 会话
+pyenv shell <version> -- 仅为当前 shell 会话设置 Python 版本
 pyenv local <version> -- 每当您位于当前目录（或其子目录）时自动选择
 pyenv global <version> -- 为您的用户帐户全局选择 
 ```
