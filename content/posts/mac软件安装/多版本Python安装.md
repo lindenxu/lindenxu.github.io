@@ -49,7 +49,22 @@ rm -rf $(pyenv root)
 
 ### 2. 使用
 
-- 
+- 查看所有可安装的版本
+```
+pyenv install -l
+```
+
+- 查看指定前缀的版本
+```
+pyenv latest -k <prefix>
+```
+
+比如查看 3.10 的最新版本
+```
+pyenv latest -k 3.10
+```
+
+
 - 安装指定版本的 Python
 ```
 pyenv install <version>
@@ -60,10 +75,13 @@ pyenv install <version>
 pyenv install 3.12.3
 ```
 
+
 - 切换 Python 版本
 ```
 pyenv 
 ```
+
+
 - 移除指定版本的 Python
 ```
 pyenv uninstall <version>
