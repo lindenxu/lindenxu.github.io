@@ -45,5 +45,8 @@ pyenv update
 rm -rf $(pyenv root)
 ```
 
+从 ~/.zshrc 或者 ~/.bash_profile 中
+
+
 ### 参考
 - [pyenv github](https://github.com/pyenv/pyenv)
