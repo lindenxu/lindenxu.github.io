@@ -102,5 +102,15 @@ pyenv global system
 pyenv uninstall <version>
 ```
 
+- 列出当前正在使用的版本
+```
+pyenv version
+```
+
+- 列出 pyenv 已安装的所有 Python 版本，并在当前活动版本旁边显示一个星号。
+```
+pyenv versions
+```
+
 ### 参考
 - [pyenv github](https://github.com/pyenv/pyenv)
