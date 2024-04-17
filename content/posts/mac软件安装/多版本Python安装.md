@@ -49,6 +49,7 @@ rm -rf $(pyenv root)
 
 ### 2. 使用
 
+- 
 - 安装指定版本的 Python
 ```
 pyenv install <version>
@@ -56,7 +57,7 @@ pyenv install <version>
 
 比如安装 3.12.3 版本
 ```
-pyenv install <version>
+pyenv install 3.12.3
 ```
 
 - 切换 Python 版本
