@@ -91,7 +91,9 @@ pyenv global 3.12.3
 现在，每当您调用 python、pip 等时，都会运行 Pyenv 提供的 3.12.3 安装中的可执行文件，而不是系统 Python。
 
 eg：切换到系统默认的版本
-
+```
+pyenv global system
+```
 
 - 移除指定版本的 Python
 ```
