@@ -59,7 +59,7 @@ pyenv install -l
 pyenv latest -k <prefix>
 ```
 
-比如查看 3.10 的最新版本
+eg：查看 3.10 的最新版本
 ```
 pyenv latest -k 3.10
 ```
@@ -70,7 +70,7 @@ pyenv latest -k 3.10
 pyenv install <version>
 ```
 
-比如安装 3.12.3 版本
+eg：安装 3.12.3 版本
 ```
 pyenv install 3.12.3
 ```
@@ -80,9 +80,17 @@ pyenv install 3.12.3
 根据使用情景，有如下切换命令
 ```
 pyenv shell <version> -- 仅为当前 shell 会话设置 Python 版本
-pyenv local <version> -- 每当您位于当前目录（或其子目录）时自动选择
-pyenv global <version> -- 为您的用户帐户全局选择 
+pyenv local <version> -- 在您位于当前目录（或其子目录）时自动选择 Python 版本
+pyenv global <version> -- 为您的用户账户全局选择 Python 版本
 ```
+
+eg：切换到 3.12.3 版本
+```
+pyenv global 3.12.3
+```
+现在，每当您调用 python、pip 等时，都会运行 Pyenv 提供的 3.12.3 安装中的可执行文件，而不是系统 Python。
+
+eg：切换到系统默认的版本
 
 
 - 移除指定版本的 Python
