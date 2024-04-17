@@ -53,7 +53,7 @@ rm -rf $(pyenv root)
 - 切换 Python 版本
 - 移除指定版本的 Python
 ```
-
+pyenv uninstall <version>
 ```
 
 ### 参考
