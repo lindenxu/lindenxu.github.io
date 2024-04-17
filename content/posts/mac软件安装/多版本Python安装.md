@@ -11,3 +11,11 @@ feature:
 ---
 
 pyenv 可让您轻松地在多个 Python 版本之间切换。它简单、不引人注目，并且遵循 UNIX 单一用途工具只做好一件事的传统
+
+<!--more-->
+
+### 1. 安装
+
+
+
+参考：https://github.com/pyenv/pyenv
