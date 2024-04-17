@@ -18,4 +18,5 @@ pyenv 可让您轻松地在多个 Python 版本之间切换。它简单、不引
 
 
 
-参考：https://github.com/pyenv/pyenv
+### 参考
+- [pyenv github](https://github.com/pyenv/pyenv)
