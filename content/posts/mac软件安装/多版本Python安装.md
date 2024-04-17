@@ -15,18 +15,31 @@ pyenv 是一款用于在同一台机器上管理多个 Python 版本的工具�
 <!--more-->
 
 ### 1. 安装/更新
+
+#### 安装
 - 安装命令
 ```
 curl https://pyenv.run | bash
 ```
 
-
+检查 ~/.zshrc 或者 ~/.bash_profile 中是否有如下命令，没有的话添加
 
 ```
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 ```
+
+重启终端，或者运行如下命令重新加载配置
+```
+source ~/.zshrc
+```
+
+#### 更新
+
+
+#### 卸载
+
 
 ### 参考
 - [pyenv github](https://github.com/pyenv/pyenv)
