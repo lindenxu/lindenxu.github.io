@@ -17,7 +17,7 @@ pyenv 是一款用于在同一台机器上管理多个 Python 版本的工具�
 ### 1. 安装/更新
 
 #### 安装
-- 安装命令
+ 安装命令
 ```
 curl https://pyenv.run | bash
 ```
@@ -45,7 +45,9 @@ pyenv update
 rm -rf $(pyenv root)
 ```
 
-从 ~/.zshrc 或者 ~/.bash_profile 中
+从 ~/.zshrc 或者 ~/.bash_profile 中移除安装时添加的命令
+
+### 2. 使用
 
 
 ### 参考
