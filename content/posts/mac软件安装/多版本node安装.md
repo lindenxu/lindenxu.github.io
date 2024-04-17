@@ -1,7 +1,9 @@
 ---
-title: nvm安装多版本node
+title: 多版本node安装
 tags:
   - Mac
+  - node
+  - 前端
 date: 2020-06-11 15:00:00
 draft: false
 hideInList: false
