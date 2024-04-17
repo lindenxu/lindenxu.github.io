@@ -42,7 +42,7 @@ pyenv update
 
 #### 卸载
 ```
-
+rm -rf $(pyenv root)
 ```
 
 ### 参考
