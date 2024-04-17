@@ -49,6 +49,12 @@ rm -rf $(pyenv root)
 
 ### 2. 使用
 
+- 安装指定版本的 Python
+- 切换 Python 版本
+- 移除指定版本的 Python
+```
+
+```
 
 ### 参考
 - [pyenv github](https://github.com/pyenv/pyenv)
