@@ -1,10 +1,10 @@
 baseURL = 'https://xulinfeng.xyz/'
 languageCode = 'zh-CN'
-timeZone = 'Asia/Shanghai'
 title = 'Linden'
 
 # 主题
-theme  =  "hello-friend"
+# theme  =  "hello-friend"
+theme  =  "black-white"
 summaryLength = 140
 hasCJKLanguage = true
 # 每页显示的文章数量用于分页
@@ -19,21 +19,24 @@ rssLimit = 5
 
 [menu]
   [[menu.main]]
-  name="首页"
-  url="/posts/"
-  weight="1"
+    name="首页"
+    url="/posts/"
+    weight="1"
+  
   [[menu.main]]
-  name="归档"
-  url="/archives/"
-  weight="4"
+    name="归档"
+    url="/archives/"
+    weight="4"
+  
   [[menu.main]]
-  name="关于我"
-  url="/about/"
-  weight="6"
+    name="关于我"
+    url="/about/"
+    weight="6"
+  
   [[menu.main]]
-  name="🔍"
-  url="/search/"
-  weight="6"
+    name="🔍"
+    url="/search/"
+    weight="6"
 
 
 
@@ -67,12 +70,14 @@ rssLimit = 5
     startLevel = 1
     
 [outputs]
-  home = ["Atom", "HTML","JSON"] # <domain>/atom.xml
-  page = ["HTML"]
+  home = ["HTML","rss"] # <domain>/atom.xml
   
-[outputFormats.Atom]
-  mediatype = "application/rss"
-  baseName = "atom"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
 
 [params.twikoo]
 	enable = true
