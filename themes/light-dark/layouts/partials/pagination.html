@@ -1,0 +1,20 @@
+{{ if (or .Paginator.HasPrev .Paginator.HasNext) }}
+<div class="flex flex-row justify-between mt-6 w-full md:w-2/3">
+  {{ if .Paginator.HasPrev }}
+  <a href="{{ .Paginator.Prev.URL }}"
+    class="flex flex-row text-base font-semibold rounded-md text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-gray-700 p-2 pr-3 ml-2 md:ml-0">
+    <i class="h-6 w-6 flex-none mr-1">{{ partial "icon.html" "caret-left" }}</i>
+    <span>{{ T "paginator.newer_posts" }}</span>
+  </a>
+{{ end }}
+<div class="flex-1"></div>
+{{ if .Paginator.HasNext }}
+  <a href="{{ .Paginator.Next.URL }}"
+    class="flex flex-row text-base font-semibold rounded-md text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-gray-700 p-2 pl-3 mr-2 md:mr-0">
+    <span>{{ T "paginator.older_posts" }}</span>
+    <i class="h-6 w-6 flex-none ml-1">{{ partial "icon.html" "caret-right" }}</i>
+  </a>
+{{ end }}
+
+</div>
+{{ end }}

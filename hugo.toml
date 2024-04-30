@@ -1,10 +1,11 @@
 baseURL = 'https://xulinfeng.xyz/'
-languageCode = 'zh-CN'
 title = 'Linden'
+subtitle = "不问明天，悠然浪费"
+
+languageCode = 'zh_cn'
 
 # 主题
-# theme  =  "hello-friend"
-theme  =  "black-white"
+theme  =  "light-dark"
 summaryLength = 140
 hasCJKLanguage = true
 # 每页显示的文章数量用于分页
@@ -12,6 +13,8 @@ paginate =  10
 # rss 输出数量
 rssLimit = 5
 
+[Author]
+  name = "Linden"
 
 [permalinks]
   posts = "/posts/:filename/"
@@ -20,46 +23,52 @@ rssLimit = 5
 [menu]
   [[menu.main]]
     name="首页"
-    url="/posts/"
+    url="/"
     weight="1"
-  
+
+  [[menu.main]]
+    name="唠叨"
+    url="/memos/"
+    weight="2"
+    
   [[menu.main]]
     name="归档"
     url="/archives/"
-    weight="4"
+    weight="3"
   
   [[menu.main]]
     name="关于我"
     url="/about/"
-    weight="6"
+    weight="4"
   
   [[menu.main]]
     name="🔍"
     url="/search/"
-    weight="6"
+    weight="5"
 
 
 
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
-  # "light" or "dark"
-  defaultTheme = "light"
-  # if you set this to 0, only submenu trigger will be visible
-  # showMenuItems = 4
   # Enable to show reading time in minutes for posts
   showReadingTime = true
-  logoText = "hello friend"
-
-  MenuMore = "更多"
   DateFormatList = "2006-01-02"
-  DateFormatSingle = "2006-01-02"
-  ReadMore = "阅读全文"
   
   description = "生命就是反重力的过程"
 	keywords = "博客、app、折腾、生活、阅读、自律"
  
+  [params.comment]
+    enable = true
+    [params.comment.twikoo]
+      envId = "https://huggingface.co/spaces/lindenxu/twikoo/"
 
+  [params.footer]
+    since = 2023
+    poweredby = true
+
+
+# 详细配置：https://gohugo.io/getting-started/configuration-markup/
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -70,7 +79,7 @@ rssLimit = 5
     startLevel = 1
     
 [outputs]
-  home = ["HTML","rss"] # <domain>/atom.xml
+  home = ["HTML","rss","json"] # <domain>/atom.xml
   
 
 [taxonomies]
@@ -79,6 +88,3 @@ tag = "tags"
 series = "series"
 
 
-[params.twikoo]
-	enable = true
-  visitor = true

@@ -1,0 +1,60 @@
+# table_of_contents = "Table of Contents"
+# open_main_menu = "Open main menu"
+# open_lang_switcher = "Open language switcher"
+# [reading_time]
+#   one = "One minute to read"
+#   other = "{{ .Count }} minutes to read"
+# 
+# [search]
+# title = "Search"
+# empty_result = "No result found."
+# placeholder = "Search..."
+# 
+# [header]
+# darkmode_toggle = "Toggle dark mode"
+# 
+# [404]
+# go_back_home = "Go back home"
+# sorry = "Sorry, we couldn't find the page you're looking for."
+# page_not_found = "Page not found"
+# 
+# [paginator]
+# newer_posts = "Newer posts"
+# older_posts = "Older posts"
+# 
+# [taxonomies]
+# categories = "Categories"
+# tags = "Tags"
+# series = "Series"
+
+
+
+
+table_of_contents = "目录"
+open_main_menu = "打开菜单"
+open_lang_switcher = "打开语言切换"
+[reading_time]
+  one = "阅读时长{{ .Count }}分钟"
+  other = "阅读时长{{ .Count }}分钟"
+
+[search]
+title = "搜索"
+empty_result = "无结果。"
+placeholder = "搜索..."
+
+[header]
+darkmode_toggle = "切换夜间模式"
+
+[404]
+go_back_home = "回到首页"
+sorry = "对不起，暂未找到您请求的页面"
+page_not_found = "页面未找到"
+
+[paginator]
+newer_posts = "上一页"
+older_posts = "下一页"
+
+[taxonomies]
+categories = "分类"
+tags = "标签"
+series = "系列"

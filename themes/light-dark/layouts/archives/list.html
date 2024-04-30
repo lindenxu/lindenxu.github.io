@@ -1,0 +1,61 @@
+{{ define "main" }}
+  <div class="w-full max-w-4xl lg:max-w-5xl">
+    {{ partial "breadcrumb.html" . }}
+    <div class="text-slate-800 dark:text-slate-200">
+      <h1 class="font-normal text-4xl mb-6">{{.Title}}</h1>
+
+      共计 {{ len (where .Site.RegularPages "Section" "posts") }} 篇日志
+  
+      {{/*  <ul class="flex flex-wrap text-xl">
+        {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+        <li class="mr-2">
+          <a href="/tags/{{ $name | urlize }}">#{{ $name }}<small>({{ .Count }})</small></a>
+        </li>
+        {{- end -}}
+      </ul>  */}}
+  
+      {{ partial "heatmap.html" . }}
+  
+      {{- range  (where (where .Site.Pages "Type" "in" "posts") "Kind" "page").GroupByDate "yyyy" }}
+      <div class="w-full">
+          {{- range .Pages.GroupByDate "2006-01" }}
+          <div class="py-8  border-b-2 border-dashed border-slate-950 dark:border-slate-200">
+            <h2 class="text-3xl py-4">{{ .Key }}</h2>
+            <div class="grid gap-4 grid-cols-2">
+            {{- range .Pages }}
+  
+            <div class="">
+              {{ if .Params.feature }}
+                {{- $cover := .Params.feature | absURL  -}}
+                {{ if .Params.UseRelativeCover }}
+                  {{- $cover := printf "%s%s" .Permalink .Params.feature -}}
+                {{ end }}
+                <img loading='lazy' decoding="async" src="{{ $cover }}" class="float-right ml-5 w-36 h-36 max-w-36 object-cover shadow-lg" />
+              {{ end }}
+              <h1 class="text-2xl mr-36"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+              <div class="mr-36">
+                {{ if .Date }}
+                  <span class="">
+                    {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                  </span>
+                {{ end }}
+                {{ if .Params.tags }}
+                <span class="">
+                  {{ range .Params.tags }}
+                    #<a href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">{{ . }}</a>&nbsp;
+                  {{ end }}
+                </span>
+                {{ end }}
+              </div>
+            </div>
+  
+            {{ end }}
+            </div>
+          </div>
+          {{- end }}
+      </div>
+      {{- end }}
+    </div>
+  
+  </div><!--posts-group end-->
+{{ end }}

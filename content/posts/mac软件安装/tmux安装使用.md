@@ -8,6 +8,7 @@ draft: false
 hideInList: false
 isTop: false
 feature:
+Toc: true
 ---
 
 tmux 是一款终端复用器，它为用户提供了创建、管理并切换多个终端会话的能力，所有这些操作都可在单一终端窗口或远程连接中完成。tmux 特别适合系统管理员、在远程服务器上工作的开发者，以及任何需要同时处理多个命令行界面的用户。
@@ -26,7 +27,7 @@ tmux 是一款终端复用器，它为用户提供了创建、管理并切换�
 
 
 ### 2. 安装
-```
+```html
 brew install tmux
 ```
 

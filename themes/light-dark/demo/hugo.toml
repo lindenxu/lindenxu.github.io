@@ -1,0 +1,41 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh_cn'
+title = 'Hugo Theme light-dark'
+
+theme  =  "light-dark"
+
+
+
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # Enable to show reading time in minutes for posts
+  showReadingTime = true
+  DateFormatList = "2006-01-02"
+
+[menu]
+  [[menu.main]]
+    name="首页"
+    url="/"
+    weight="1"
+    
+  [[menu.main]]
+    name="归档"
+    url="/archives/"
+    weight="2"
+  
+  [[menu.main]]
+    name="关于"
+    url="/about/"
+    weight="3"
+  
+  [[menu.main]]
+    name="🔍"
+    url="/search/"
+    weight="4"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

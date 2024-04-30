@@ -1,0 +1,9 @@
+{{if .Site.Params.comment.enable}}
+  <div class="my-10 flex justify-center relative text-gray-700 dark:text-gray-200">
+    <hr class="absolute w-full mt-5 z-0" />
+    <span class="z-10 bg-white dark:bg-gray-700 p-2">欢迎评论</span>
+  </div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.staticfile.org/twikoo/1.6.32/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: '{{.Site.Params.comment.twikoo.envId}}', el: '#tcomment' })</script>
+{{end}}

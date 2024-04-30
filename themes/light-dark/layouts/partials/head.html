@@ -1,0 +1,39 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"
+/>
+<meta
+  name="keywords"
+  content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
+/>
+<meta name="robots" content="noodp" />
+
+<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
+
+<link rel="stylesheet" href="//cdn.staticfile.net/lxgw-wenkai-screen-webfont/1.7.0/style.min.css">
+
+{{- /*加载tailwindcss编译后的css*/ -}}
+{{- $styles := resources.Get "css/index.css" -}}
+{{- if hugo.IsDevelopment }}
+  {{- $styles = $styles | fingerprint -}}
+{{ else }}
+  {{- $styles = $styles | minify | fingerprint -}}
+{{ end -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+{{- /*渲染数学公式*/ -}}
+{{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
+
+{{- /*引用Google Analytics内部模板：https://gohugo.io/templates/internal/#use-the-google-analytics-template*/ -}}
+{{- template "_internal/google_analytics.html" . -}}
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+<!-- RSS | JSON -->
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{ end -}}
