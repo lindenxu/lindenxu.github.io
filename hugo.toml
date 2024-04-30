@@ -61,7 +61,7 @@ rssLimit = 5
   [params.comment]
     enable = true
     [params.comment.twikoo]
-      envId = "https://huggingface.co/spaces/lindenxu/twikoo/"
+      envId = "https://lindenxu-twikoo.hf.space"
 
   [params.footer]
     since = 2023
