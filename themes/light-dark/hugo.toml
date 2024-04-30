@@ -1,23 +1,57 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
 title = 'My New Hugo Site'
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
+languageCode = 'zh_cn'
 
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
+summaryLength = 140
+hasCJKLanguage = true
+# 每页显示的文章数量用于分页
+paginate =  10
 
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Enable to show reading time in minutes for posts
+  showReadingTime = true
+
+  DateFormatList = "2006-01-02"
+
+  # SEO keywords and description for your site.
+  keywords = "hugo, tailwind, tailwindcss, hugo theme"
+
+  subtitle = ""
+
+  [params.search]
+    summaryInclude = 180 # show only part of content in search result.
+    minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
+    threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
+
+  [params.taxonomies.icons]
+    categories = "category-2"
+    tags = "tags"
+
+  [params.comment]
+    enable = false
+    [params.comment.twikoo]
+      envId = ""
+
+
+# 详细配置：https://gohugo.io/getting-started/configuration-markup/
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.cjk]
+        enable = true
+        eastAsianLineBreaks = true
+        escapedSpace = true
+  [markup.highlight]
+    noClasses = false
 
 [module]
   [module.hugoVersion]
     extended = false
-    min = "0.116.0"
+    min = "0.120.0"
+

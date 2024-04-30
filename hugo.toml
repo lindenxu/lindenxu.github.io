@@ -1,20 +1,16 @@
 baseURL = 'https://xulinfeng.xyz/'
 title = 'Linden'
-subtitle = "不问明天，悠然浪费"
+
 
 languageCode = 'zh_cn'
 
 # 主题
 theme  =  "light-dark"
-summaryLength = 140
-hasCJKLanguage = true
-# 每页显示的文章数量用于分页
-paginate =  10
+
 # rss 输出数量
 rssLimit = 5
 
-[Author]
-  name = "Linden"
+
 
 [permalinks]
   posts = "/posts/:filename/"
@@ -49,34 +45,18 @@ rssLimit = 5
 
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-  # Enable to show reading time in minutes for posts
-  showReadingTime = true
-  DateFormatList = "2006-01-02"
-  
+  subtitle = "不问明天，悠然浪费"
   description = "生命就是反重力的过程"
 	keywords = "博客、app、折腾、生活、阅读、自律"
+
+  [params.author]
+      name = "Linden"
  
   [params.comment]
     enable = true
     [params.comment.twikoo]
       envId = "https://lindenxu-twikoo.hf.space"
 
-  [params.footer]
-    since = 2023
-    poweredby = true
-
-
-# 详细配置：https://gohugo.io/getting-started/configuration-markup/
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 1
     
 [outputs]
   home = ["HTML","rss","json"] # <domain>/atom.xml
