@@ -6,7 +6,7 @@ languageCode = 'zh_cn'
 summaryLength = 140
 hasCJKLanguage = true
 # 每页显示的文章数量用于分页
-paginate =  10
+paginate =  3
 
 [params]
   # dir name of your blog content (default is `content/posts`)

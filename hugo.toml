@@ -6,7 +6,10 @@ languageCode = 'zh_cn'
 
 # 主题
 theme  =  "light-dark"
-
+summaryLength = 140
+hasCJKLanguage = true
+# 每页显示的文章数量用于分页
+paginate =  10
 # rss 输出数量
 rssLimit = 5
 
@@ -45,9 +48,15 @@ rssLimit = 5
 
 
 [params]
-  subtitle = "不问明天，悠然浪费"
+  subtitle = "生命不息，奋斗不止"
   description = "生命就是反重力的过程"
-	keywords = "博客、app、折腾、生活、阅读、自律"
+	keywords = "博客、技术、生活"
+
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  
+  # Enable to show reading time in minutes for posts
+  showReadingTime = true
 
   [params.author]
       name = "Linden"
@@ -57,14 +66,13 @@ rssLimit = 5
     [params.comment.twikoo]
       envId = "https://lindenxu-twikoo.hf.space"
 
-    
 [outputs]
   home = ["HTML","rss","json"] # <domain>/atom.xml
   
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
+  category = "categories"
+  tag = "tags"
+  series = "series"
 
 
