@@ -1,61 +1,69 @@
 {{ define "main" }}
-  <div class="w-full max-w-4xl lg:max-w-5xl">
-    {{ partial "breadcrumb.html" . }}
-    <div class="text-slate-800 dark:text-slate-200">
-      <h1 class="font-normal text-4xl mb-6">{{.Title}}</h1>
-
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  {{ partial "breadcrumb.html" . }}
+  <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
+    <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+      <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
+    </h1>
+    <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
       共计 {{ len (where .Site.RegularPages "Section" "posts") }} 篇日志
-  
-      {{/*  <ul class="flex flex-wrap text-xl">
-        {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
-        <li class="mr-2">
-          <a href="/tags/{{ $name | urlize }}">#{{ $name }}<small>({{ .Count }})</small></a>
-        </li>
-        {{- end -}}
-      </ul>  */}}
-  
+    </h2>
+
+    {{/*  <ul class="flex flex-wrap text-xl">
+      {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+      <li class="mr-2">
+        <a href="/tags/{{ $name | urlize }}">#{{ $name }}<small>({{ .Count }})</small></a>
+      </li>
+      {{- end -}}
+    </ul>  */}}
+    <div class="">
       {{ partial "heatmap.html" . }}
-  
-      {{- range  (where (where .Site.Pages "Type" "in" "posts") "Kind" "page").GroupByDate "yyyy" }}
-      <div class="w-full">
-          {{- range .Pages.GroupByDate "2006-01" }}
-          <div class="py-8  border-b-2 border-dashed border-slate-950 dark:border-slate-200">
-            <h2 class="text-3xl py-4">{{ .Key }}</h2>
-            <div class="grid gap-4 grid-cols-2">
-            {{- range .Pages }}
-  
-            <div class="">
-              {{ if .Params.feature }}
-                {{- $cover := .Params.feature | absURL  -}}
-                {{ if .Params.UseRelativeCover }}
-                  {{- $cover := printf "%s%s" .Permalink .Params.feature -}}
-                {{ end }}
-                <img loading='lazy' decoding="async" src="{{ $cover }}" class="float-right ml-5 w-36 h-36 max-w-36 object-cover shadow-lg" />
-              {{ end }}
-              <h1 class="text-2xl mr-36"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
-              <div class="mr-36">
-                {{ if .Date }}
-                  <span class="">
-                    {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
-                  </span>
-                {{ end }}
-                {{ if .Params.tags }}
-                <span class="">
-                  {{ range .Params.tags }}
-                    #<a href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">{{ . }}</a>&nbsp;
+    </div>
+
+    {{- range  (where (where .Site.Pages "Type" "in" "posts") "Kind" "page").GroupByDate "yyyy" }}
+      <div class="w-full text-slate-800 dark:text-slate-200 mt-3">
+        {{- range .Pages.GroupByDate "2006-01" }}
+          <div class="">
+            <h2 class="text-3xl py-4 relative before:absolute before:-left-5 before:content-['#'] before:text-green-500 before:tracking-normal">{{ .Key }}</h2>
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+              {{- range .Pages }}
+                <div class="mb-4">
+                  {{ if .Params.feature }}
+                    {{- $cover := .Params.feature | absURL  -}}
+                    {{ if .Params.UseRelativeCover }}
+                      {{- $cover := printf "%s%s" .Permalink .Params.feature -}}
+                    {{ end }}
+                    <img loading='lazy' decoding="async" src="{{ $cover }}" class="float-right ml-5 w-36 h-36 max-w-36 object-cover shadow-lg" />
                   {{ end }}
-                </span>
-                {{ end }}
-              </div>
-            </div>
-  
-            {{ end }}
+                  <h1 class="text-2xl mr-36"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+                  <div class="mr-36">
+                    {{ if .Params.tags }}
+                      <div class="flex flex-wrap">
+                        {{ range .Params.tags }}
+                          {{- $tagUrl := (urlize (printf "tags/%s" . )) | absURL -}}
+                          <a href="{{ $tagUrl }}/" class="flex flex-row text-sm mr-2 py-1">
+                            <i class="h-5 w-5 flex-none">
+                              {{ partial "icon.html" "tag" }}
+                            </i>  
+                            <span>{{ . }}</span>
+                          </a>
+                        {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if .Date }}
+                      <span class="">
+                        {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                      </span>
+                    {{ end }}
+                  </div>
+                </div>
+              {{ end }}
             </div>
           </div>
-          {{- end }}
+        {{- end }}
       </div>
-      {{- end }}
-    </div>
-  
-  </div><!--posts-group end-->
+    {{- end }}
+  </div>
+
+</div>
 {{ end }}
