@@ -95,6 +95,12 @@ nvm use <version>
 nvm ls
 ```
 
+- 查看可用的 node 版本
+```
+nvm ls-remote
+```
+
+
 - 设置node的某个版本为默认
 ```
 nvm alias default <version>
@@ -117,4 +123,5 @@ nvm uninstall <version>
 npm install -g cnpm --registry=https://registry.npmmirror.com
 ```
 
-> 安装参考：https://github.com/nvm-sh/nvm
+### 安装参考
+- [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
