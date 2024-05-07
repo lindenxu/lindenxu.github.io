@@ -1548,6 +1548,10 @@ h6 {
   align-self: center;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }

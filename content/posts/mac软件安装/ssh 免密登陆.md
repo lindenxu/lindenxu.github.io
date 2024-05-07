@@ -49,11 +49,11 @@ sshpass -p '服务器密码' ssh -p 端口号 用户名@IP地址
 ### 2. iTerm2集成sshpass实现快速SSH连接
 - 设置iterm2的Profiles
 
-![-w726](media/15908925451602/15909282569457.jpg)
+![-w726](https://r.xulinfeng.xyz/linden/2020/05/15909282569457.jpg)
 
 添加新的Profiles，设置Name，Send text at start中填入连接远程服务器的命令（见上方sshpass使用）
 
-![-w918](media/15908925451602/15909284730517.jpg)
+![-w918](https://r.xulinfeng.xyz/linden/2020/05/15909284730517.jpg)
 
 注意：
 如果第一次使用sshpass链接失败，需要先使用一下ssh命令连接一次。
