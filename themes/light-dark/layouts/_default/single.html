@@ -6,11 +6,6 @@
       <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
     </h1>
 
-    {{ with .Description }}
-    <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
-      {{ . | $.Page.RenderString }}
-    </h2>
-    {{ end }}
     {{ partial "block/taxonomies.html" .}}
 
     <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
@@ -46,7 +41,15 @@
         </div>
       {{ end -}}
     </div>
-
+    {{ if .Params.image }}
+      {{- $cover := .Params.image | absURL  -}}
+      {{ if .Params.UseRelativeCover }}
+        {{- $cover := printf "%s%s" .Permalink .Params.image -}}
+      {{ end }}
+      <div>
+        <img loading='lazy' decoding="async" src="{{ $cover }}" class="object-cover size-full" />
+      </div>
+    {{ end }}
     {{ if or .Params.Toc $.Site.Params.Toc }}
       {{ if ne .Params.Toc false }}
       <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
@@ -56,7 +59,7 @@
       {{ end }}
     {{ end }}
 
-    <article class="mt-6 w-full max-w-4xl lg:max-w-5xl break-words prose prose-slate dark:prose-invert prose-quoteless prose-th:text-left">
+    <article class="post-content mt-6 w-full max-w-4xl lg:max-w-5xl break-words prose prose-slate dark:prose-invert prose-quoteless prose-th:text-left">
       {{ .Content | safeHTML }}
     </article>
 

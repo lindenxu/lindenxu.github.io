@@ -3,6 +3,7 @@ title = 'Linden'
 
 
 languageCode = 'zh_cn'
+timeZone = "Asia/Shanghai"
 
 # 主题
 theme  =  "light-dark"
@@ -57,6 +58,8 @@ rssLimit = 5
   
   # Enable to show reading time in minutes for posts
   showReadingTime = true
+
+  Toc = true
 
   [params.author]
       name = "Linden"

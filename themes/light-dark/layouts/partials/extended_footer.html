@@ -27,3 +27,17 @@
 
 {{ if .Params.asciinema }}{{ partial "asciinema.html" . }}{{ end }}
 
+
+{{/*  图片灯箱效果  */}}
+<script src="//fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
+<script type="text/javascript">
+  window.ViewImage && ViewImage.init('.post-content img')
+</script>
+
+{{/*  中英文之间加空格  */}}
+<script src="//cdn.staticfile.net/pangu/4.0.7/pangu.min.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.autoSpacingPage();
+  });
+</script>

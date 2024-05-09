@@ -28,10 +28,10 @@
             <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
               {{- range .Pages }}
                 <div class="mb-4">
-                  {{ if .Params.feature }}
-                    {{- $cover := .Params.feature | absURL  -}}
+                  {{ if .Params.image }}
+                    {{- $cover := .Params.image | absURL  -}}
                     {{ if .Params.UseRelativeCover }}
-                      {{- $cover := printf "%s%s" .Permalink .Params.feature -}}
+                      {{- $cover := printf "%s%s" .Permalink .Params.image -}}
                     {{ end }}
                     <img loading='lazy' decoding="async" src="{{ $cover }}" class="float-right ml-5 w-36 h-36 max-w-36 object-cover shadow-lg" />
                   {{ end }}
