@@ -1,11 +1,12 @@
 ---
 title: {{NAME}}
 tags: [{{VALUE:tag？}}]
+categories: [{{VALUE:category？}}]
+series: []
 date: {{DATE:YYYY-MM-DD HH:mm:ss}}
 draft: true
-hideInList: false
-isTop: false
-feature: 
+description: ""
+image: ""
 ---
 
 
