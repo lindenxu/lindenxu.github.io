@@ -67,7 +67,7 @@ rssLimit = 5
   [params.umami]
     enable = true
     url = "https://u.xulinfeng.xyz/script.js"
-    websiteId = "61dc66be-b6f9-4ae5-ac7b-fa5d68071ee0"
+    websiteId = "c63e7b77-0f23-47a0-b7e1-bd98c0fbbf20"
 
   [params.comment]
     enable = true

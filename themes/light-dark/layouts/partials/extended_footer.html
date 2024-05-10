@@ -43,6 +43,6 @@
 </script>
 
 {{/*  umami 统计  */}}
-{{ if hugo.IsProduction and .Site.Params.umami.enable }}
+{{ if and hugo.IsProduction .Site.Params.umami.enable }}
     <script async defer src="{{ .Site.Params.umami.url }}" data-website-id="{{ .Site.Params.umami.websiteId }}" ></script>
 {{ end }}
