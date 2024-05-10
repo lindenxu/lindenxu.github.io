@@ -2,7 +2,7 @@
 {{- if hugo.IsDevelopment }}
   {{- $built = $built | fingerprint -}}
 {{ else }}
-{{- $built = $built | minify | fingerprint -}}
+  {{- $built = $built | minify | fingerprint -}}
 {{ end -}}
 <script src="{{ $built.RelPermalink }}"></script>
 
@@ -41,3 +41,8 @@
     pangu.autoSpacingPage();
   });
 </script>
+
+{{/*  umami 统计  */}}
+{{ if hugo.IsProduction and .Site.Params.umami.enable }}
+    <script async defer src="{{ .Site.Params.umami.url }}" data-website-id="{{ .Site.Params.umami.websiteId }}" ></script>
+{{ end }}
