@@ -72,7 +72,7 @@ rssLimit = 5
   [params.comment]
     enable = true
     [params.comment.twikoo]
-      envId = "https://lindenxu-twikoo.hf.space"
+      envId = "https://tk.xulinfeng.xyz/"
 
 [outputs]
   home = ["HTML","rss","json"] # <domain>/atom.xml
