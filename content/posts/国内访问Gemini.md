@@ -17,3 +17,4 @@ image: ""
 
 ## 致谢
 - [我们也要用Gemini Pro](https://zhile.io/2023/12/24/gemini-pro-proxy.html)
+- [\[免费\]利用 Gemini Pro 给文章添加 AI摘要](https://blog.peiluming.com/article/520)
