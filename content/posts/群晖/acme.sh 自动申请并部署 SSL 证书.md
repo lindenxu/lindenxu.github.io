@@ -50,10 +50,12 @@ docker run --rm \
 ```
 其中：
 `/volume1/docker/acme_sh` 可以替换为你想要加载 acme 输出的本地目录，并确保文件夹已存在。
+
 `<YOUR_EMAIL>` 应替换为你的邮箱。
 
 可选参数：`<eab-kid>`，`<eab-hmac-key>`
 要是你在 [ZeroSSL](https://app.zerossl.com) 注册过账号的话，可以使用外部帐户绑定 (EAB) 凭据引导 acme.sh 。拥有 ZeroSSL 帐户的用户可以从开发者控制台管理颁发的证书。
+
 > 参考：https://github.com/acmesh-official/acme.sh/wiki/ZeroSSL.com-CA
 
 # 5. 签发证书
@@ -75,14 +77,18 @@ docker run --rm \
 ```
 其中：
 `<CF_Token>`，`<CF_Zone_ID>` 是在 Cloudflare 申请的 DNS API 调用密钥。
+
 `<DOMAIN>` 填需要申请证书的域名
+
 `--keylength` 指定证书的长度，可选值：2048, 3072, 4096, 8192 或者 ec-256, ec-384, ec-521。本文选择的是 ec-256
 
 命令执行完后，证书会输出在 /volume1/docker/acme_sh/<DOMAIN> 目录下。
 
 # 6. 部署证书
 证书生成后，不建议手动复制和导入生成的证书。acme.sh 的 deploy 命令提供了群晖 NAS 的部署方式。
+
 > 参考：https://github.com/acmesh-official/acme.sh/wiki/deployhooks
+
 具体命令如下：
 ```
 export SYNO_Username=<SYNO_Username>
@@ -104,10 +110,16 @@ docker run --rm \
 ```
 其中：
 `<SYNO_Username>`，`<SYNO_Password>` 能登录群晖的用户名，密码（具有管理员权限）
+
 `<DOMAIN>` 需要部署的域名证书
+
 `<SYNO_Certificate>` 证书的描述，以后通过他替换已有证书
+
 `<SYNO_Scheme>`，`<SYNO_Port>` 访问群晖的地址，比如你在局域网内是通过 https://192.168.1.5000 访问的，那么 SYNO_Scheme 填 http，SYNO_Port 填 5000
+
 `SYNO_Create` 第一次导入证书时需要填此参数
+
 `--ecc` 签发证书时 keylength 选的 ec-256，因此需要这个参数
+
 `--insecure` 不需要校验服务端证书，部署证书是通过群晖的 API 实现的，比如：https://localhost:5000/webapi/entry.cgi?api=SYNO.Core.Certificate&method=import&version=1&SynoToken=
 
