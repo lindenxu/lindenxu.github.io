@@ -51,7 +51,7 @@ rssLimit = 5
 [params]
   subtitle = "生命不息，奋斗不止"
   description = "生命就是反重力的过程"
-	keywords = "博客、技术、生活"
+	keywords = "博客,技术,生活"
 
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"

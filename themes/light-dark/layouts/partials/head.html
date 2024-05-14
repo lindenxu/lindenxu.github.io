@@ -4,10 +4,15 @@
   name="description"
   content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"
 />
-<meta
-  name="keywords"
-  content="{{ with .Params.tags }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
-/>
+
+{{ $keywords := $.Site.Params.Keywords }}
+{{ if .Params.keywords }}
+  {{ $keywords = delimit .Params.keywords "," }}
+{{ else if .Params.tags }}
+  {{ $keywords = delimit .Params.tags "," }}
+{{ end }}
+<meta name="keywords" content="{{- $keywords -}}" />
+
 <meta name="robots" content="noodp" />
 
 <link rel="canonical" href="{{ .Permalink }}" />
