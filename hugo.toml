@@ -75,6 +75,13 @@ enableRobotsTXT = true
     [params.comment.twikoo]
       envId = "https://tk.xulinfeng.xyz/"
 
+
+
+[services]
+  # 谷歌分析
+  [services.googleAnalytics]
+    ID = "GTM-WF2MN6K4"
+
 [outputs]
   home = ["HTML","rss","json"] # <domain>/atom.xml
   

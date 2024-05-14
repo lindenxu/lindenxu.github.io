@@ -36,7 +36,9 @@
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
 
 {{- /*引用Google Analytics内部模板：https://gohugo.io/templates/internal/#use-the-google-analytics-template*/ -}}
-{{- template "_internal/google_analytics.html" . -}}
+{{- if hugo.IsProduction -}}
+  {{- template "_internal/google_analytics.html" . -}}
+{{ end -}}
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
