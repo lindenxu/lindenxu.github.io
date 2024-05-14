@@ -14,7 +14,8 @@ paginate =  10
 # rss 输出数量
 rssLimit = 5
 
-
+# 生成 robots.txt 文件
+enableRobotsTXT = true
 
 [permalinks]
   posts = "/posts/:filename/"
