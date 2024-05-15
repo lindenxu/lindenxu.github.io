@@ -1,7 +1,5 @@
-{{- $built := resources.Get "js/main.js" | js.Build "main.js" -}}
-{{- if hugo.IsDevelopment }}
-  {{- $built = $built | fingerprint -}}
-{{ else }}
+{{- $built := resources.Get "js/main.js" -}}
+{{- if hugo.IsProduction }}
   {{- $built = $built | minify | fingerprint -}}
 {{ end -}}
 <script src="{{ $built.RelPermalink }}"></script>

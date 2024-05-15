@@ -38,7 +38,10 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1"></script>
 
-{{- $dot := resources.Get "js/doT.js" | minify | fingerprint }}
+{{- $dot := resources.Get "js/doT.js" }}
+{{- if hugo.IsProduction }}
+  {{- $dot = $dot | minify | fingerprint -}}
+{{ end -}}
 <script src="{{ $dot.RelPermalink }}"></script>
 
 <script type="text/javascript">
