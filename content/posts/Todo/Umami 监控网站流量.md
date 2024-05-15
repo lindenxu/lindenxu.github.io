@@ -75,7 +75,13 @@ networks:
 
 ![](https://r.xulinfeng.xyz/linden/2024/05/7676b47c95a4768dac8f4d633f6c3b3f.png)
 
-等待数据库创建完成。
+等待数据库创建完成。点击左下角小齿轮 Database，查看数据库访问地址
+![](https://r.xulinfeng.xyz/linden/2024/05/4ab2d4440ea5ce815567db5e72806739.png)
+
+
+#### umami 页面部署
+
+
 
 
 ## 致谢
