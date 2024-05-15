@@ -80,6 +80,9 @@ networks:
 
 
 #### umami 页面部署
+github 上先 fork
+
+Vercel 上新建项目
 
 
 
