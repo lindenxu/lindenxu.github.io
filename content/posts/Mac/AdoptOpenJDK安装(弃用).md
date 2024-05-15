@@ -1,14 +1,14 @@
 ---
 title: AdoptOpenJDK安装(弃用)
+slug: adoptopenjdk-install
+categories: [Mac]
 tags:
   - Mac
   - brew
   - Java
 date: 2020-11-26 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 AdoptOpenJDK 已变更为 Temurin JDK

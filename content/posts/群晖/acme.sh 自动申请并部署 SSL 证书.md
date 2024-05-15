@@ -1,13 +1,14 @@
 ---
 title: acme.sh 自动申请并部署 SSL 证书
+slug: acme
+categories:
+  - 群晖
 tags:
   - 群晖
   - nas
 date: 2024-03-08 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 acme.sh 用于生成免费的 ssl 证书，其实现了 acme 协议，由纯 Shell 脚本语言编写。

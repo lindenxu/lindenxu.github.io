@@ -1,13 +1,13 @@
 ---
 title: node包管理命令
+slug: node-package-manager-command
+categories: [前端]
 tags:
   - 前端
   - HTML
 date: 2023-10-07 14:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 整理 npm，pnpm，yarn 命令对比

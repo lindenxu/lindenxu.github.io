@@ -1,12 +1,12 @@
 ---
 title: Homebrew 安装使用
+slug: homebrew-install
+categories: [Mac]
 tags:
   - Mac
 date: 2020-11-24 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 Homebrew 简称：brew。

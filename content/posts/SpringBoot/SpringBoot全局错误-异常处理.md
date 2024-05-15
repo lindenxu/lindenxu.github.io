@@ -1,12 +1,12 @@
 ---
 title: SpringBoot全局错误异常处理
+slug: springboot-global-error-exception-handle
+categories: [SpringBoot]
 tags:
   - SpringBoot
 date: 2020-12-22 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 

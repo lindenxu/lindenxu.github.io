@@ -17,11 +17,10 @@ rssLimit = 5
 # 生成 robots.txt 文件
 enableRobotsTXT = true
 
-# [permalinks]
-#   [permalinks.page]
-#     posts = "/posts/:slugorfilename/"
-#     tags = "/tags/:slug/"
-  
+[permalinks]
+  [permalinks.page]
+    posts = "/posts/:slugorfilename/"
+
 
 [menu]
   [[menu.main]]

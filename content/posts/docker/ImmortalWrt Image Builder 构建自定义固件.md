@@ -1,5 +1,7 @@
 ---
 title: ImmortalWrt Image Builder 构建自定义固件
+slug: immortalwrt-image-builder
+categories: [docker]
 tags:
   - docker
   - OpenWRT
@@ -7,9 +9,7 @@ tags:
   - 旁路由
 date: 2024-03-26 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 使用 ImmortalWrt Image Builder 构建自定义固件

@@ -1,13 +1,13 @@
 ---
 title: CSS 设备像素比
+slug: css-device-pixel-ratio
+categories: [前端]
 tags:
   - HTML
   - 前端
 date: 2024-02-23 14:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 

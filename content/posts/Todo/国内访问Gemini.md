@@ -1,7 +1,8 @@
 ---
 title: 国内访问Gemini
-tags: [AI]
+slug: visit-gemini
 categories: [AI]
+tags: [AI]
 series: []
 date: 2024-05-11 12:24:17
 draft: true

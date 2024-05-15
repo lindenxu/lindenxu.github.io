@@ -1,12 +1,12 @@
 ---
 title: StarUML 安装
+slug: staruml-install
+categories: [Mac]
 tags:
   - Mac
 date: 2023-10-07 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 

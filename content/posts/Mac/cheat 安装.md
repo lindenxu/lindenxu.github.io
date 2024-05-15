@@ -1,13 +1,13 @@
 ---
 title: cheat 安装
+slug: cheat-install
+categories: [Mac]
 tags:
   - Mac
   - brew
 date: 2023-10-25 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 cheat是一个命令行辅助工具，适用于类Unix的系统，再也不怕记不住命令的用法了，通过cheat快速找到命令惯用的例子。

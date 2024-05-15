@@ -1,12 +1,12 @@
 ---
 title: Xcode Command Line Tool 安装
+slug: xcode-command-line-tool-install
+categories: [Mac]
 tags:
   - Mac
 date: 2023-11-08 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 Xcode Command Line Tool是Mac OS上的一套在终端上运行的开发工具。

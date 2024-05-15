@@ -1,12 +1,12 @@
 ---
 title: ssh 免密登陆
+slug: sshpass-install
+categories: [Mac]
 tags:
   - Mac
 date: 2020-05-31 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 ssh 登陆不能在命令行中指定密码，sshpass 的出现则解决了这一问题。它允许你用 -p 参数指定明文密码，然后直接登录远程服务器。

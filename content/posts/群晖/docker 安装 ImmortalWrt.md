@@ -1,13 +1,14 @@
 ---
 title: docker 安装 ImmortalWrt
+slug: docker-install-immortalwrt
+categories:
+  - 群晖
 tags:
   - 群晖
   - nas
 date: 2024-03-26 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 docker 安装 ImmortalWrt，并分配局域网 IP

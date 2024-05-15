@@ -1,12 +1,12 @@
 ---
 title: 自签名SSL证书双向认证
+slug: self-signed-certificate-double-authentication
+categories: [Linux]
 tags:
   - Linux
 date: 2023-10-24 15:00:00
 draft: false
-hideInList: false
-isTop: false
-feature:
+
 ---
 
 自签名双向认证证书
