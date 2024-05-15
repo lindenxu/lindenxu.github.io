@@ -80,9 +80,9 @@ networks:
 
 
 #### umami 页面部署
-github 上先 fork
+> github 上先 fork 一下 [umami](https://github.com/umami-software/umami) 项目。
 
-Vercel 上新建项目
+Vercel 上新建项目，选择从 github 导入
 
 
 
