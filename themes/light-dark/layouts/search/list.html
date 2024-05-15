@@ -52,7 +52,7 @@
   };
 </script>
 
-{{- $search := resources.Get "js/search.js" | js.Build "search.js" -}}
+{{- $search := resources.Get "js/search.js" | js.Build "js/search.js" -}}
 {{- if not hugo.IsDevelopment }}
   {{- $search = $search | minify | fingerprint -}}
 {{ else }}

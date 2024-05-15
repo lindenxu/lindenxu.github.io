@@ -17,9 +17,6 @@
     </i>
   </div>
 
-
-  
-
   {{- $jsCopy := resources.Get "js/code-copy.js" -}}
   {{- if hugo.IsProduction }}
     {{- $jsCopy = $jsCopy | minify | fingerprint -}}
