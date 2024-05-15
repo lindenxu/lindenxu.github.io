@@ -18,7 +18,7 @@ rssLimit = 5
 enableRobotsTXT = true
 
 [permalinks]
-  posts = "/posts/:filename/"
+  posts = "/posts/:slugorfilename/"
   tags = "/tags/:slug/"
 
 [menu]
