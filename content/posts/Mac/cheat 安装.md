@@ -10,21 +10,21 @@ draft: false
 
 ---
 
-cheat是一个命令行辅助工具，适用于类Unix的系统，再也不怕记不住命令的用法了，通过cheat快速找到命令惯用的例子。
+cheat 是一个命令行辅助工具，适用于类 Unix 的系统，再也不怕记不住命令的用法了，通过 cheat 快速找到命令惯用的例子。
 
 <!--more-->
 
 ## 1. 介绍
-cheat命令通过简单的实例告诉你一个命令的具体使用方法
 
+cheat 命令通过简单的实例告诉你一个命令的具体使用方法
 
 ## 2. 安装
 
-#### 查看cheat信息
+#### 查看 cheat 信息
+
 ```
 brew info cheat
 ```
-
 
 ```
 ~ » brew info cheat                                                                                                                  lin@lin-mac
@@ -42,8 +42,8 @@ Build: go ✘
 
 可以看到 cheat 依赖 go
 
+#### 安装 cheat
 
-#### 安装 cheat 
 ```
 brew install cheat
 ```
@@ -64,8 +64,8 @@ Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
 Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
 ```
 
-
 ## 3. 配置
+
 在使用 cheat 这个工具之前，确实需要完成一些配置工作。以下是针对您提到的三个必要的步骤的详细说明：
 
 - 生成配置文件：在使用 cheat 之前，通常需要生成一个配置文件。这个配置文件包含了 cheat 的一些基本设置，以便让它知道从哪里查找 cheatsheets，以及如何格式化输出等内容。可以通过运行以下命令来生成配置文件：
@@ -73,10 +73,10 @@ Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
 - 下载社区 cheatsheets：cheat 有一个活跃的社区，提供了很多有用的 cheatsheets。在使用 cheat 之前，您可能需要下载这些社区的 cheatsheets，以便能够访问其中的内容。
 
 首次运行 cheat 命令将运行一个安装程序，该安装程序将自动执行上述所有操作。
+
 ```
 cheat
 ```
-
 
 ```
 ~ » cheat                                                                                                                                 lin@lin-mac
@@ -94,7 +94,6 @@ Please read this file for advanced configuration information.
 
 cheat 的配置以及 cheatsheets 保存在~/.config/cheat 下
 
-
 ## 4. 使用介绍
 
 ```
@@ -109,6 +108,5 @@ cheat -l
 cheat tail
 
 ```
-
 
 > 参考：https://github.com/cheat/cheat

@@ -13,16 +13,20 @@ draft: false
 
 <!--more-->
 
-
 ## 一 证书生成
+
 ### 1. 生成私钥
+
 命令：
+
 ```
 openssl genrsa -des3 -out server_pass1.key 2048
 ```
+
 运行后提示输入密码，例子中密码为：123456
 
 输出：
+
 ```
 ~/Desktop/tmp » openssl genrsa -des3 -out server_pass1.key 2048                                                                           lin@lin-mac
 Generating RSA private key, 2048 bit long modulus
@@ -34,43 +38,47 @@ Verifying - Enter pass phrase for server_pass1.key:
 ```
 
 ### 2. 去除私钥中的密码
+
 命令：
+
 ```
 openssl rsa -in server_pass1.key -out server2.key
 ```
 
 为何需要去除密码：
-每次Apache启动Web服务器时，都会要求输入密码，这显然非常不方便。所以要删除私钥中的密码。
+每次 Apache 启动 Web 服务器时，都会要求输入密码，这显然非常不方便。所以要删除私钥中的密码。
 
-### 3. 生成证书签名请求csr
+### 3. 生成证书签名请求 csr
+
 ```
 openssl req -new -key server2.key -out server3.csr -subj "/C=CN/ST=Jiangsu/L=Wuxi/O=MOT/OU=web/CN=xulinfeng.com"
 ```
 
-subj参数说明：
-| 字段 | 含义                    | 示例          |
+subj 参数说明：
+| 字段 | 含义 | 示例 |
 |------|-------------------------|:--------------|
-| /C=  | Country 国家            | CN            |
-| /ST= | State or Province 省    | Jiangsu       |
-| /L=  | Location or City 城市   | Wuxi          |
-| /O=  | Organization 组织或企业 | cetc          |
-| /OU= | Organization Unit 部门  | dev           |
-| /CN= | Common Name 域名或IP    | xulinfeng.com |
-|      |                         |               |  
+| /C= | Country 国家 | CN |
+| /ST= | State or Province 省 | Jiangsu |
+| /L= | Location or City 城市 | Wuxi |
+| /O= | Organization 组织或企业 | cetc |
+| /OU= | Organization Unit 部门 | dev |
+| /CN= | Common Name 域名或 IP | xulinfeng.com |
+| | | |
 
-其他可以随便填，但CN必须为你网站的域名
+其他可以随便填，但 CN 必须为你网站的域名
 
+### 4. 生成自签名 SSL 证书
 
-
-### 4. 生成自签名SSL证书
 ```
 openssl x509 -req -days 365 -in server3.csr -signkey server2.key -out server4.crt
 ```
 
 ## 二 证书生成一条龙
->参考：https://www.liaoxuefeng.com/article/990311924891552
+
+> 参考：https://www.liaoxuefeng.com/article/990311924891552
 
 想一步到位的童鞋，可以使用如下脚本一键生成
+
 ```
 #!/bin/sh
 
@@ -111,33 +119,35 @@ echo "}"
 
 将脚本保存为 sh 文件，本地运行。遇到需要输入密码的地方使用一样的密码
 
-
-
-
 ## 二 根据不同的使用场景生成各自的证书
 
-### 1. pfx格式（Tomcat）
+### 1. pfx 格式（Tomcat）
+
 使用 openssl 工具将 crt 和 key 格式的证书转还成 pfx:
+
 ```
 openssl pkcs12 -export -out server5.pfx -inkey server2.key -in server4.crt
 ```
 
-运行后提示输入2次密码，例子中pfx的密码为：12345678
+运行后提示输入 2 次密码，例子中 pfx 的密码为：12345678
 输出：
+
 ```
 ~/Desktop/tmp » openssl pkcs12 -export -out server5.pfx -inkey server2.key -in server4.crt                                                lin@lin-mac
 Enter Export Password:
 Verifying - Enter Export Password:
 ```
 
-### 2. jks格式（Tomcat）
+### 2. jks 格式（Tomcat）
 
-#### 使用jdk自带的keytool查看证书信息（非必需）
+#### 使用 jdk 自带的 keytool 查看证书信息（非必需）
+
 ```
 keytool -list -v -keystore server5.pfx
 ```
 
 输入密码后，输出：
+
 ```
 ~/Desktop/tmp » keytool -list -v -keystore server5.pfx                                                                                    lin@lin-mac
 输入密钥库口令:
@@ -167,13 +177,14 @@ keytool -list -v -keystore server5.pfx
 *******************************************
 ```
 
+#### 将 pfx 格式文件转为 jks
 
-#### 将pfx格式文件转为jks
 ```
 keytool -importkeystore -srckeystore  server5.pfx -srcstoretype pkcs12 -destkeystore server6.jks -deststoretype pkcs12
 ```
 
-输入3次密码（前2次是将来访问jks的密码，后1次是pfx的密码）后，输出：
+输入 3 次密码（前 2 次是将来访问 jks 的密码，后 1 次是 pfx 的密码）后，输出：
+
 ```
 ~/Desktop/tmp » keytool -importkeystore -srckeystore  server5.pfx -srcstoretype pkcs12 -destkeystore server6.jks -deststoretype pkcs12    lin@lin-mac
 正在将密钥库 server5.pfx 导入到 server6.jks...
@@ -183,4 +194,5 @@ keytool -importkeystore -srckeystore  server5.pfx -srcstoretype pkcs12 -destkeys
 已成功导入别名 1 的条目。
 已完成导入命令: 1 个条目成功导入, 0 个条目失败或取消
 ```
-例子中jks的密码为：qazwsx
+
+例子中 jks 的密码为：qazwsx

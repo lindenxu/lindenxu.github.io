@@ -11,11 +11,12 @@ draft: false
 
 ---
 
-nvm（Node Version Manager）是一个命令行工具，允许开发者在同一台机器上快速安装和使用不同版本的Node.js。这对于测试和管理不同项目所需的Node.js环境非常有用，因为不同的项目可能需要不同的Node.js版本。
+nvm（Node Version Manager）是一个命令行工具，允许开发者在同一台机器上快速安装和使用不同版本的 Node.js。这对于测试和管理不同项目所需的 Node.js 环境非常有用，因为不同的项目可能需要不同的 Node.js 版本。
 
 <!--more-->
 
 ### 1. 安装/更新
+
 - 运行如下命令
 
 ```linux
@@ -24,7 +25,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 更新的话，重新运行上面的脚本即可（注意版本号改成最新的）
 
-
 - 检查 ~/.zshrc 或者 ~/.bash_profile 中是否有如下命令，没有的话添加
 
 ```linux
@@ -32,12 +32,15 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 ```
+
 - 重启终端，或者运行如下命令重新加载配置
 
 ```
 source ~/.zshrc
 ```
+
 或者
+
 ```
 source ~/.bash_profile
 ```
@@ -48,9 +51,9 @@ source ~/.bash_profile
 nvm --version
 ```
 
-- 切换nvm源为国内源
+- 切换 nvm 源为国内源
 
-编辑~/.bash_profile，设置nvm的
+编辑~/.bash_profile，设置 nvm 的
 
 ```linux
 export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
@@ -58,25 +61,26 @@ export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
 ```
 
 ### 2. 使用
-- 安装指定版本的node
+
+- 安装指定版本的 node
 
 ```linux
 nvm install <version>
 ```
 
-比如安装12版本的node执行
+比如安装 12 版本的 node 执行
 
 ```linux
 nvm install 12
 ```
 
-- 安装指定版本的node，并且从特定的node版本导入npm安装过的包
+- 安装指定版本的 node，并且从特定的 node 版本导入 npm 安装过的包
 
 ```linux
 nvm install <version> --reinstall-packages-from=<other_version>
 ```
 
-比如，已经安装了12版本的node，现在想安装10版本的，并且从12版本导入npm安装过的包（比如vue...）
+比如，已经安装了 12 版本的 node，现在想安装 10 版本的，并且从 12 版本导入 npm 安装过的包（比如 vue...）
 
 ```linux
 nvm install 10 --reinstall-packages-from=12
@@ -96,12 +100,13 @@ nvm ls
 ```
 
 - 查看可用的 node 版本
+
 ```
 nvm ls-remote
 ```
 
+- 设置 node 的某个版本为默认
 
-- 设置node的某个版本为默认
 ```
 nvm alias default <version>
 ```
@@ -114,14 +119,16 @@ nvm alias default <version>
 nvm uninstall <version>
 ```
 
-### 3. 使用cnpm代替npm（可选）
+### 3. 使用 cnpm 代替 npm（可选）
+
 > 参考：https://npmmirror.com/
 
-安装cnpm
+安装 cnpm
 
 ```linux
 npm install -g cnpm --registry=https://registry.npmmirror.com
 ```
 
 ### 安装参考
+
 - [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)

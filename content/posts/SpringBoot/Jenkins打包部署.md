@@ -11,9 +11,8 @@ draft: true
 
 ---
 
+### Jenkins 执行脚本
 
-
-### Jenkins执行脚本
 ```
 echo "收到分支 [${GIT_BRANCH}] Event消息..."
 
@@ -22,14 +21,14 @@ DIR=$PWD
 cd ${DIR}/target/maven-archiver
 
 #版本号
-VERSION=`sed '/^version=/!d;s/.*=//' pom.properties`  
+VERSION=`sed '/^version=/!d;s/.*=//' pom.properties`
 ARTIFACTID=`sed '/^artifactId=/!d;s/.*=//' pom.properties`
 T=`date +%s`
 #包名称
 PACKAGENAME=$ARTIFACTID-$VERSION.jar
 
 #正式环境
-if [ $branch == 'origin/prod' ]; then 
+if [ $branch == 'origin/prod' ]; then
 #移动后包名称
 MOVE_PACKAGENAME=$ARTIFACTID-$VERSION-$T.jar
 
@@ -51,7 +50,7 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
    -d '{"msgtype": "text", "text": {"content": "尼尔森'${content}'"}}'
 
 #uat环境
-elif [ $branch == 'origin/uat' ]; then 
+elif [ $branch == 'origin/uat' ]; then
 #移动后包名称
 MOVE_PACKAGENAME=$ARTIFACTID-$VERSION-$T.jar
 
@@ -74,7 +73,7 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
 
 
 
-#elif [ $branch == 'origin/test' ]; then 
+#elif [ $branch == 'origin/test' ]; then
 else
 
 #测试环境
@@ -85,11 +84,11 @@ ssh -p 22 root@nielsen-os.np "find /opt/nplus/nielsen/service/ -name 'service-pr
 #把jar包传到服务器上
 scp -r -P 22 ${DIR}/target/$PACKAGENAME root@nielsen-os.np:/opt/nplus/nielsen/service/
 #执行服务器上的启动脚本
-ssh -p 22 root@nielsen-os.np sh /opt/nplus/nielsen/sh/project.sh  
+ssh -p 22 root@nielsen-os.np sh /opt/nplus/nielsen/sh/project.sh
 
 #发送钉钉通知
-res=`curl -X POST \https://v2.alapi.cn/api/shici \-H 'Content-Type: application/x-www-form-urlencoded' \-d 'token=V23RvAc7Ai8uJY4v&format=json&type=all' > index.json   && cat index.json |awk -F ':' '{print $5}' |awk -F "," '{print $1}' |tr -d '\"'` 
-res=${res##*:}    
+res=`curl -X POST \https://v2.alapi.cn/api/shici \-H 'Content-Type: application/x-www-form-urlencoded' \-d 'token=V23RvAc7Ai8uJY4v&format=json&type=all' > index.json   && cat index.json |awk -F ':' '{print $5}' |awk -F "," '{print $1}' |tr -d '\"'`
+res=${res##*:}
 res=${res/\"/ }
 res=${res/\"/ }
 res=${res/,/ }
@@ -106,6 +105,4 @@ echo "该分支无需处理"
 fi
 ```
 
-
 ### 服务器
-

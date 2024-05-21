@@ -16,28 +16,31 @@ docker 安装 ImmortalWrt，并分配局域网 IP
 <!--more-->
 
 ### 1. 终端中查看网络信息
+
 ```
 ip addr
 ```
-找到群晖ip地址所在的那行, scope global 后面就是网卡信息
+
+找到群晖 ip 地址所在的那行, scope global 后面就是网卡信息
 ![](media/17114443474575/17128201059536.jpg)
 
-
-
 ### 2. 开启网卡混杂模式
+
 ```
 ifconfig ovs_eth1 promisc
 ```
+
 再次查看网络信息，网卡上出现 PROMISC 说明开启成功
 ![](media/17114443474575/17128202232369.jpg)
 
-
 关闭网卡混杂模式
+
 ```
 ifconfig ovs_eth1 -promisc
 ```
 
 ### 3. docker 创建 macvlan 网络
+
 > 参考：https://docs.docker.com/network/drivers/macvlan/
 
 ```
@@ -52,11 +55,10 @@ docker network create -d macvlan \
 ```
 
 查看创建的网络
+
 ```
 docker network ls
 ```
-
-
 
 gunzip immortalwrt-23.05.1-x86-64-generic-rootfs.tar.gz
 
@@ -88,8 +90,6 @@ config interface 'wan6'
     option proto 'dhcp6'
     option device 'eth0'
 ```
-
-
 
 > 参考：
 > https://blog.simpdog.me/posts/using-docker-to-deploy-openwrt-as-a-home-router/

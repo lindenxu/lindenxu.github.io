@@ -9,15 +9,16 @@ draft: false
 
 ---
 
-Xcode Command Line Tool是Mac OS上的一套在终端上运行的开发工具。
+Xcode Command Line Tool 是 Mac OS 上的一套在终端上运行的开发工具。
 
 <!--more-->
 
 ## 1. 介绍
 
-Mac OS并不包含开箱即用的编程所需的所有软件和工具。 相反，Apple 为程序员提供了一个名为 Xcode 的完整开发环境，可以单独下载和安装。 完整的 Xcode 包非常庞大，需要超过 40GB 的磁盘空间，并且支持所有 Apple 操作系统的开发。 许多软件开发人员，尤其是 Web 应用程序开发人员，使用 Mac，但并不只为 Apple 设备开发软件。 他们仍然需要使用 Xcode 包安装的类 Unix 工具和实用程序。 幸运的是，Apple 提供了一个单独且小得多的下载，即 Xcode Command Line Tools，它可以安装软件开发最需要的实用程序。 
+Mac OS 并不包含开箱即用的编程所需的所有软件和工具。 相反，Apple 为程序员提供了一个名为 Xcode 的完整开发环境，可以单独下载和安装。 完整的 Xcode 包非常庞大，需要超过 40GB 的磁盘空间，并且支持所有 Apple 操作系统的开发。 许多软件开发人员，尤其是 Web 应用程序开发人员，使用 Mac，但并不只为 Apple 设备开发软件。 他们仍然需要使用 Xcode 包安装的类 Unix 工具和实用程序。 幸运的是，Apple 提供了一个单独且小得多的下载，即 Xcode Command Line Tools，它可以安装软件开发最需要的实用程序。
 
 Xcode Command Line Tool 提供了 git，gcc，make 等常用的命令。具体包含哪些，使用如下命令查看：
+
 ```
 ls /Library/Developer/CommandLineTools/usr/bin/
 ```
@@ -50,21 +51,24 @@ clang-stat-cache          gperf                     nm-classic                sw
 clangd                    hdxml2manxml              nmedit                    swift-api-digester
 ```
 
-
 ## 2. 安装使用
 
 ### 安装
+
 ```
 xcode-select --install
 ```
-这将启动一个弹出窗口，询问您是否想要安装Xcode命令行工具。单击“安装”按钮并遵循屏幕上的提示即可完成安装
+
+这将启动一个弹出窗口，询问您是否想要安装 Xcode 命令行工具。单击“安装”按钮并遵循屏幕上的提示即可完成安装
 
 ### 查看版本
+
 ```
 xcode-select -v
 ```
 
 ### 卸载
+
 ```
 sudo rm -rf /Library/Developer/CommandLineTools
 ```

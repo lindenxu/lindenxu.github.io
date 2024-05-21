@@ -9,8 +9,7 @@ draft: false
 
 ---
 
-
-安装lrzsz
+安装 lrzsz
 brew install lrzsz
 
 > 参考：https://juejin.cn/post/7018097793327693860
