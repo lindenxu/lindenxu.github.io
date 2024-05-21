@@ -1,5 +1,6 @@
 ---
 title: {{NAME}}
+slug: {{VALUE:slug? }}
 tags: [{{VALUE:tag？}}]
 categories: [{{VALUE:category？}}]
 series: []
