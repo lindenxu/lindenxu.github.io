@@ -22,28 +22,30 @@ enableRobotsTXT = true
     posts = "/posts/:slugorfilename/"
 
 
-[menu]
-  [[menu.main]]
+[menus]
+  [[menus.main]]
     name="首页"
     url="/"
     weight="1"
 
-  [[menu.main]]
+  [[menus.main]]
     name="唠叨"
-    url="/memos/"
+    url="https://memo.xulinfeng.xyz"
     weight="2"
-    
-  [[menu.main]]
+    [menus.main.params]
+      blank="_blank"
+
+  [[menus.main]]
     name="归档"
     url="/archives/"
     weight="3"
   
-  [[menu.main]]
+  [[menus.main]]
     name="关于我"
     url="/about/"
     weight="4"
   
-  [[menu.main]]
+  [[menus.main]]
     name="🔍"
     url="/search/"
     weight="5"
