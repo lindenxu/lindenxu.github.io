@@ -15,7 +15,7 @@ nvm（Node Version Manager）是一个命令行工具，允许开发者在同一
 
 <!--more-->
 
-### 1. 安装/更新
+## 1. 安装/更新
 
 - 运行如下命令
 
@@ -60,7 +60,7 @@ export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
 
 ```
 
-### 2. 使用
+## 2. 使用
 
 - 安装指定版本的 node
 
@@ -119,7 +119,7 @@ nvm alias default <version>
 nvm uninstall <version>
 ```
 
-### 3. 使用 cnpm 代替 npm（可选）
+## 3. 使用 cnpm 代替 npm（可选）
 
 > 参考：https://npmmirror.com/
 
@@ -129,6 +129,6 @@ nvm uninstall <version>
 npm install -g cnpm --registry=https://registry.npmmirror.com
 ```
 
-### 安装参考
+## 安装参考
 
 - [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
