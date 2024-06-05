@@ -1,7 +1,7 @@
 ---
 title: ImmortalWrt Image Builder 构建自定义固件
 slug: immortalwrt-image-builder
-categories: [docker]
+categories: [Docker]
 tags:
   - docker
   - OpenWRT
