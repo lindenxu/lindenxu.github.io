@@ -43,3 +43,4 @@ docker rmi m.daocloud.io/ghcr.io/usememos/memos:latest
 
 - [Docker Hub 镜像加速器](https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6)
 - [public-image-mirror](https://github.com/DaoCloud/public-image-mirror)
+- [image-mirror](https://github.com/imdingtalk/image-mirror)
