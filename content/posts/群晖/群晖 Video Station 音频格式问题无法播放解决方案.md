@@ -28,7 +28,7 @@ Video Station 套件版本：3.1.1-3168
 ## 替换 FFmpeg 4
 
 1. 安装社区套件 FFmpeg 4
-   ![](https://r.xulinfeng.xyz/linden/2024/07/e88dc98c7580e51fb84911d6f8b86b1c.png)
+   ![](https://r.xulinfeng.com/linden/2024/07/e88dc98c7580e51fb84911d6f8b86b1c.png)
 
 > 注：不会添加社区套件的可以参考[[群晖折腾记二常用软件]]一文
 
@@ -85,7 +85,7 @@ cp /var/packages/VideoStation/target/bin/ffmpeg /var/packages/CodecPack/target/b
 
 3. 重启 Video Station
    可以在套件中心先停用再启用
-   ![](https://r.xulinfeng.xyz/linden/2024/07/d81164c53fb8935a5f8a1bdfb8c32026.png)
+   ![](https://r.xulinfeng.com/linden/2024/07/d81164c53fb8935a5f8a1bdfb8c32026.png)
 
 ## 还原脚本
 

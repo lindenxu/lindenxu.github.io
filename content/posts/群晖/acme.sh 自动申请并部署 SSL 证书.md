@@ -160,10 +160,10 @@ docker run --rm \
 
 群晖打开控制面板-任务计划-新增。
 常规理设置脚本名称，用户账号选项 root ，脚本需要该权限执行。
-![image.png](https://r.xulinfeng.xyz/linden/2024/05/33121fe4c19a02ed51aceec01a7095b1.png)
+![image.png](https://r.xulinfeng.com/linden/2024/05/33121fe4c19a02ed51aceec01a7095b1.png)
 
 计划每月执行一次
-![image.png](https://r.xulinfeng.xyz/linden/2024/05/00e890aa270be46fe6247f2ef6cab997.png)
+![image.png](https://r.xulinfeng.com/linden/2024/05/00e890aa270be46fe6247f2ef6cab997.png)
 
 任务设置，用户定义脚本输入：
 
@@ -171,4 +171,4 @@ docker run --rm \
 bash /volume1/docker/acme_sh/auto_renew.sh >> /volume1/docker/acme_sh/auto_renew.log
 ```
 
-![image.png](https://r.xulinfeng.xyz/linden/2024/05/35dbe1653724c174304dfd7fb3646dbc.png)
+![image.png](https://r.xulinfeng.com/linden/2024/05/35dbe1653724c174304dfd7fb3646dbc.png)

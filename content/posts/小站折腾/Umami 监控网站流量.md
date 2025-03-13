@@ -76,28 +76,28 @@ networks:
 
 #### 创建数据库
 
-![](https://r.xulinfeng.xyz/linden/2024/05/0be73db1e97f2621e9d646dfd4576be3.png)
+![](https://r.xulinfeng.com/linden/2024/05/0be73db1e97f2621e9d646dfd4576be3.png)
 
-![](https://r.xulinfeng.xyz/linden/2024/05/7676b47c95a4768dac8f4d633f6c3b3f.png)
+![](https://r.xulinfeng.com/linden/2024/05/7676b47c95a4768dac8f4d633f6c3b3f.png)
 
 等待数据库创建完成。点击左下角小齿轮 Database，记录数据库访问地址
-![](https://r.xulinfeng.xyz/linden/2024/05/4ab2d4440ea5ce815567db5e72806739.png)
+![](https://r.xulinfeng.com/linden/2024/05/4ab2d4440ea5ce815567db5e72806739.png)
 
 #### umami 页面部署
 
 > github 上先 fork 一下 [umami](https://github.com/umami-software/umami) 项目。
 
 Vercel 上新建项目，选择从 github 导入
-![](https://r.xulinfeng.xyz/linden/2024/05/bb934c45e4d40db40db6babcc02f1ed5.png)
+![](https://r.xulinfeng.com/linden/2024/05/bb934c45e4d40db40db6babcc02f1ed5.png)
 
-![](https://r.xulinfeng.xyz/linden/2024/05/fd0f1efde293f790c758f7b2c9e277e9.png)
+![](https://r.xulinfeng.com/linden/2024/05/fd0f1efde293f790c758f7b2c9e277e9.png)
 
 环境变量里添加**DATABASE_URL**，数据库访问地址。(记得点击 Add 😂)
 接着点击 Deploy，等待部署完成。
-![](https://r.xulinfeng.xyz/linden/2024/05/5c1e7c2e19e711898a40240172a76cc0.png)
+![](https://r.xulinfeng.com/linden/2024/05/5c1e7c2e19e711898a40240172a76cc0.png)
 
 可选。建议绑定一下自己的域名
-![](https://r.xulinfeng.xyz/linden/2024/05/b51a99df9cdb1c119178e405e067db28.png)
+![](https://r.xulinfeng.com/linden/2024/05/b51a99df9cdb1c119178e405e067db28.png)
 
 ## 使用
 
@@ -106,7 +106,7 @@ Vercel 上新建项目，选择从 github 导入
 右上角的地球图标切换语音为中文。
 
 设置页面中添加网站后，点击编辑按钮，获取跟踪代码。
-![](https://r.xulinfeng.xyz/linden/2024/05/1bfd8a6b076340bdfc7c5ebb1bd9f949.png)
+![](https://r.xulinfeng.com/linden/2024/05/1bfd8a6b076340bdfc7c5ebb1bd9f949.png)
 
 ## 致谢
 

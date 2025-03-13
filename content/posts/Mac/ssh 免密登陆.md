@@ -55,11 +55,11 @@ sshpass -p '服务器密码' ssh -p 端口号 用户名@IP地址
 
 - 设置 iterm2 的 Profiles
 
-![-w726](https://r.xulinfeng.xyz/linden/2020/05/15909282569457.jpg)
+![-w726](https://r.xulinfeng.com/linden/2020/05/15909282569457.jpg)
 
 添加新的 Profiles，设置 Name，Send text at start 中填入连接远程服务器的命令（见上方 sshpass 使用）
 
-![-w918](https://r.xulinfeng.xyz/linden/2020/05/15909284730517.jpg)
+![-w918](https://r.xulinfeng.com/linden/2020/05/15909284730517.jpg)
 
 注意：
 如果第一次使用 sshpass 链接失败，需要先使用一下 ssh 命令连接一次。

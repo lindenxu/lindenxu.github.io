@@ -1,4 +1,4 @@
-baseURL = 'https://xulinfeng.xyz/'
+baseURL = 'https://xulinfeng.com/'
 title = 'Linden'
 
 
@@ -9,13 +9,17 @@ timeZone = "Asia/Shanghai"
 theme  =  "light-dark"
 summaryLength = 140
 hasCJKLanguage = true
-# 每页显示的文章数量用于分页
-paginate =  10
+
 # rss 输出数量
 rssLimit = 5
 
 # 生成 robots.txt 文件
 enableRobotsTXT = true
+
+
+# 每页显示的文章数量用于分页
+[pagination]
+    pagerSize = 10
 
 [permalinks]
   [permalinks.page]
@@ -30,7 +34,7 @@ enableRobotsTXT = true
 
   [[menus.main]]
     name="唠叨"
-    url="https://memo.xulinfeng.xyz"
+    url="https://memo.xulinfeng.com"
     weight="2"
     [menus.main.params]
       blank="_blank"
@@ -70,13 +74,13 @@ enableRobotsTXT = true
   # umami 统计
   [params.umami]
     enable = true
-    url = "https://u.xulinfeng.xyz/script.js"
+    url = "https://u.xulinfeng.com/script.js"
     websiteId = "c63e7b77-0f23-47a0-b7e1-bd98c0fbbf20"
 
   [params.comment]
     enable = true
     [params.comment.twikoo]
-      envId = "https://tk.xulinfeng.xyz/"
+      envId = "https://tk.xulinfeng.com/"
 
 
 [outputs]
