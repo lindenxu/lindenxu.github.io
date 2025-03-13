@@ -126,6 +126,20 @@ brew pin xx
 brew unpin xx
 ```
 
+- 仓库管理
+
+```linux
+# 列出已添加的库
+brew tap
+
+# 添加一个库
+brew tap xx/xx
+
+# 删除一个库
+brew untap xx/xx
+
+```
+
 #### 2. 其他命令
 
 - 使用代理(前提是你要有 socks 代理)，比如安装时使用代理
