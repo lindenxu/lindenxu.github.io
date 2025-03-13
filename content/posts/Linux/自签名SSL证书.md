@@ -1,12 +1,12 @@
 ---
-title: 自签名SSL证书
+title: 自签名 SSL 证书
 slug: self-signed-certificate
-categories: [Linux]
+categories:
+  - Linux
 tags:
   - Linux
 date: 2023-10-24 15:00:00
 draft: false
-
 ---
 
 自签名证书

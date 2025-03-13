@@ -1,13 +1,13 @@
 ---
-title: tmux安装使用
+title: tmux 安装使用
 slug: tmux-install
-categories: [Mac]
+categories:
+  - Mac
 tags:
   - Mac
   - brew
 date: 2024-04-18 16:42:39
 draft: false
-
 Toc: true
 ---
 

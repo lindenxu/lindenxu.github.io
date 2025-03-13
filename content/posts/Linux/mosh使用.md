@@ -1,12 +1,12 @@
 ---
-title: mosh使用
+title: mosh 使用
 slug: mosh-use
-categories: [Linux]
+categories:
+  - Linux
 tags:
   - Linux
 date: 2020-11-22 15:00:00
 draft: false
-
 ---
 
 当使用 ssh 连接远程服务器时，遇到网络延时高或者客户端丢失网络变更 ip 后，ssh 连接就会自动断开。网络恢复后并不会重连，需要重新 ssh。

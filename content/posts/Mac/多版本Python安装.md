@@ -1,13 +1,13 @@
 ---
-title: 多版本Python安装
+title: 多版本 Python 安装
 slug: multi-python-install
-categories: [Mac]
+categories:
+  - Mac
 tags:
   - Mac
   - Python
 date: 2024-04-17 16:06:38
 draft: false
-
 ---
 
 pyenv  是一款用于在同一台机器上管理多个 Python 版本的工具。它使您能够轻松安装、切换和管理各种 Python 版本，而不必修改系统的默认安装。这对于那些需要不同 Python 版本的项目或需要针对多种 Python 环境测试代码的开发者尤为有用。

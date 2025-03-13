@@ -1,14 +1,14 @@
 ---
-title: 多版本node安装
+title: 多版本 node 安装
 slug: multi-node-install
-categories: [Mac]
+categories:
+  - Mac
 tags:
   - Mac
   - node
   - 前端
 date: 2020-06-11 15:00:00
 draft: false
-
 ---
 
 nvm（Node Version Manager）是一个命令行工具，允许开发者在同一台机器上快速安装和使用不同版本的 Node.js。这对于测试和管理不同项目所需的 Node.js 环境非常有用，因为不同的项目可能需要不同的 Node.js 版本。
